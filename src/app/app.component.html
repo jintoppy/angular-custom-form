@@ -1,4 +1,7 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<form [formGroup]="userForm">
+  <label for="title">Title: </label>
+  <input id="title" formControlName="title" />
+  <section1 [formGroup]="section1FormGroup"></section1>
+  <section2 [formGroup]="section2FormGroup"></section2>
+  {{ userForm.value | json }}
+</form>
